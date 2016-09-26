@@ -1,0 +1,10 @@
+﻿ALTER SERVER ROLE [sysadmin] ADD MEMBER [VAGRANT-2012-R2\vagrant];
+
+
+GO
+ALTER SERVER ROLE [sysadmin] ADD MEMBER [NT SERVICE\SQLWriter];
+
+
+GO
+ALTER SERVER ROLE [sysadmin] ADD MEMBER [NT SERVICE\Winmgmt];
+

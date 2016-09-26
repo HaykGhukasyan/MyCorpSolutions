@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="__sqlexpress.MyCorpSolutionsDatabase"
+  DTS:DTSID="{413B0462-826A-44EB-A006-D6AE54EBAD20}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=.\sqlexpress;Initial Catalog=MyCorpSolutionsDatabase;Integrated Security=True;Application Name=SSIS-CustomerETL-{413B0462-826A-44EB-A006-D6AE54EBAD20}.\sqlexpress.MyCorpSolutionsDatabase;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
