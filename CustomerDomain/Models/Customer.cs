@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace CustomerService.Models
+namespace CustomerDomain.Models
 {
     public class Customer
     {

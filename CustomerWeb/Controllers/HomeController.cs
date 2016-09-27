@@ -1,4 +1,7 @@
-﻿using CustomerWeb.Properties;
+﻿using CustomerWeb.Helpers;
+using CustomerWeb.Models;
+using CustomerWeb.Properties;
+using CustomerWeb.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +16,20 @@ namespace CustomerWeb.Controllers
         {
             ViewBag.Settings = Settings.Default;
             return View();
+        }
+
+        public ActionResult ExportAll()
+        {
+            var customerOrderService = new CustomerOrderService();
+            var customerOrders = customerOrderService.GetCustomerOrders();
+            var csvFormatter = new CsvFormatter<CustomerOrder>(",");
+            var exportService = new CsvExportService<CustomerOrder>(csvFormatter);
+            var exportStream = exportService.GetExportStream(customerOrders);
+
+            return new FileStreamResult(exportStream, "text/csv")
+            {
+                FileDownloadName = "CustomerOrders.csv"
+            };
         }
     }
 }

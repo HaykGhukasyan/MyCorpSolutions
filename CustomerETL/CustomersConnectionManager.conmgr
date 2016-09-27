@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x0022_"
       DTS:CodePage="65001"
-      DTS:ConnectionString="C:\dev\MyCorpSolutions\CustomerETL\Customers.csv">
+      DTS:ConnectionString="C:\Users\vagrant\Documents\Visual Studio 2015\Projects\MyCorpSolutions\CustomerETL\Customers.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -21,7 +21,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="FirstName"
-          DTS:DTSID="{21074FDE-599A-4E79-9AB1-2070773D6E94}"
+          DTS:DTSID="{6B13B886-05E8-46D9-A972-BE0BE60672F1}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="LastName"
-          DTS:DTSID="{15071666-8AC2-449D-B25D-D33D0647A1B4}"
+          DTS:DTSID="{8596D2AF-244F-4A7D-BA8C-859576684832}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

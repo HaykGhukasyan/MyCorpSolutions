@@ -8,6 +8,7 @@
     self.loadingOrders = ko.observable(false);
 
     self.customers = ko.observable([]);
+    self.orders = ko.observable([]);
 
     self.loadCustomers = function () {
         self.loadingCustomers(true);
@@ -34,10 +35,12 @@
             success: function (data) {
                 self.orders(data.map(function (item) {
                     return new order(item.Id, item.CustomerId, item.OrderItem);
+                }).filter(function (order) {
+                    return order.customerId === customer.id;
                 }));
             },
             error: function (error) {
-                console.log('Error loading customers: ' + error);
+                console.log('Error loading orders: ' + error);
             }
 
         })

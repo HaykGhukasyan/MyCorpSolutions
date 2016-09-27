@@ -1,4 +1,4 @@
-﻿using CustomerService.Models;
+﻿using CustomerDomain.Models;
 using Simple.Data;
 using System;
 using System.Collections.Generic;
@@ -44,27 +44,6 @@ namespace CustomerService.Controllers
             {
                 throw;
             }
-        }
-
-        // GET: api/Order/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Order
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/Order/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Order/5
-        public void Delete(int id)
-        {
         }
     }
 }

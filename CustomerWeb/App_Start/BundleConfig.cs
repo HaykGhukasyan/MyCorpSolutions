@@ -21,7 +21,9 @@ namespace CustomerWeb
             bundles.Add(new ScriptBundle("~/bundles/app")
                 .Include(
                 "~/Scripts/App/mainViewModel.js",
-                "~/Scripts/App/customer.js"));
+                "~/Scripts/App/customer.js",
+                "~/Scripts/App/order.js"
+                ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

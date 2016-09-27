@@ -5,25 +5,36 @@
 <div class="row">
     <div class="col-md-3">
         <p>
-            <button id="loadCustomerButton" class="btn btn-default" data-bind="click: loadCustomers">Load Customers</button>
+            <button id="loadCustomerButton" class="btn btn-default" data-bind="click: loadCustomers, enable: !loadingCustomers">Load Customers</button>
         </p>
     </div>
-    
+
 </div>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-2">
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Customers</th></tr>
+            </thead>
+            <tbody data-bind="foreach: customers">
+                <tr><td><div class="btn btn-link" data-bind="text: fullName, click: $root.loadOrders"></div></td></tr>
+            </tbody>
+        </table>
     </div>
-    <div class="col-md-4">
-        <h3>Customers</h3>
-        <ul data-bind="foreach: customers">
-            <li>
-                <div class="btn btn-link" data-bind="text: fullName, click: loadOrders"></div>
-            </li>
-        </ul>
+
+    <div class="col-md-10">
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Orders</th></tr>
+            </thead>
+            <tbody data-bind="foreach: orders">
+                <tr><td><div class="btn" data-bind="text: orderItem"></div></td></tr>
+            </tbody>
+        </table>
     </div>
-    <div class="col-md-4">
-        <h3>Orders</h3>
-        <ul>
-        </ul>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-success pull-right" href="@Url.Action("ExportAll")">Export All</a>
     </div>
 </div>
